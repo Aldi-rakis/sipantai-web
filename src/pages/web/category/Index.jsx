@@ -8,7 +8,6 @@ import "slick-carousel/slick/slick-theme.css";
 import CardSlider from "../../../components/utilities/CardSlider";
 import { Link } from "react-router-dom";
 
-
 function Kategory() {
   const styles = {
     card: {
@@ -21,38 +20,40 @@ function Kategory() {
     }
   };
 
-  // Data kategori dan gambar-gambar untuk setiap kategori DEfault
-const categoryDefault = [
-  { name: 'Hotel ', images: ['/public/bandung2.jpg', '/public/bandung2.jpg', '/public/bandung2.jpg', '/public/bandung2.jpg', '/public/bandung2.jpg'] },
-  { name: 'Wisata', images: ['/public/bandung2.jpg', '/public/bandung2.jpg', '/public/bandung2.jpg', '/public/bandung2.jpg', '/public/bandung2.jpg'] },
-  { name: 'Rumah ', images: ['/public/bandung2.jpg', '/public/bandung2.jpg', '/public/bandung2.jpg', '/public/bandung2.jpg', '/public/bandung2.jpg'] }
-];
+  const categoryDefault = [
+    { name: 'Hotel ', images: ['/public/bandung2.jpg', '/public/bandung2.jpg', '/public/bandung2.jpg', '/public/bandung2.jpg', '/public/bandung2.jpg'] },
+    { name: 'Wisata', images: ['/public/bandung2.jpg', '/public/bandung2.jpg', '/public/bandung2.jpg', '/public/bandung2.jpg', '/public/bandung2.jpg'] },
+    { name: 'Rumah ', images: ['/public/bandung2.jpg', '/public/bandung2.jpg', '/public/bandung2.jpg', '/public/bandung2.jpg', '/public/bandung2.jpg'] }
+  ];
 
-  // Set judul dokumen
   document.title = "TRAVEL GIS - Website Wisata Berbasis GIS (Geographic Information System)";
 
-  // Variabel state
   const [categories, setCategories] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
-  const [error, setError] = useState(null);// Tambahkan state isLoading
+  const [error, setError] = useState(null);
 
-  // Ambil data kategori dan tempat wisata
   useEffect(() => {
     fetchDataCategories();
   }, []);
 
-  // Ambil data kategori
   const fetchDataCategories = async () => {
     try {
-      const { data } = await Api.get(`/api/web/categories/`);
-      // Reverse the order of categories
-      setCategories(data.data.reverse());
-      setIsLoading(false); // Set isLoading menjadi false setelah data ter-fetch
+      // const { data } = await Api.get(`/api/web/categories/`);
+      const response = await fetch('https://backend-sipantai.rakis.my.id/api/web/categories');
+      const data = await response.json();
 
+      console.log(data.data);
+
+      if (!data) {
+        console.log(await response.text());
+        return;
+      }
+      setCategories(data.data.reverse());
+      setIsLoading(false);
     } catch (error) {
       console.error(error);
       setError(error);
-      setIsLoading(false); // Set isLoading menjadi false jika terjadi error
+      setIsLoading(false);
     }
   };
 
@@ -66,7 +67,6 @@ const categoryDefault = [
     arrows: false
   };
 
-  // Gambar default
   const defaultImage = (
     <React.Fragment>
       <LayoutWeb>
@@ -100,23 +100,18 @@ const categoryDefault = [
   );
 
   if (isLoading || error) {
-    return defaultImage; // Tampilkan gambar default saat fetching atau gagal fetching
+    return defaultImage;
   }
-
-
-
 
   return (
     <React.Fragment>
       <LayoutWeb>
-
         <div className="mt-75 mb-75">
-
           {categories.map((category, index) => (
             <div className="mx-3 mt-3" key={index}>
               <div style={{ display: 'flex', justifyContent: 'space-between' }} className="text-white">
                 <h5 className="text-white">KATEGORI: <strong className="text-uppercase text-white">{category.name}</strong></h5>
-                <p>lihat selengkapnya</p>
+                <Link to={`/category/${category.name}`}> lihat selengkapnya</Link>
               </div>
               <div className="slider-container">
                 <Slider {...settings}>
@@ -132,9 +127,7 @@ const categoryDefault = [
                 </Slider>
               </div>
             </div>
-          ))
-          }
-
+          ))}
         </div>
       </LayoutWeb>
     </React.Fragment>
