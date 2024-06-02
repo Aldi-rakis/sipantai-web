@@ -7,7 +7,7 @@ import LayoutAdmin from "../../../layouts/Admin";
 import { PhotoProvider, PhotoView } from 'react-photo-view';
 import 'react-photo-view/dist/react-photo-view.css';
 
-const PengaduanDetailPage = () => {
+const Detaildatapengaduan = () => {
     const { id } = useParams();
     const [pengaduan, setPengaduan] = useState(null);
     const [balasan, setBalasan] = useState("");
@@ -58,7 +58,7 @@ const PengaduanDetailPage = () => {
     }
 
     return (
-        <LayoutAdmin>
+      
             <div className="container mt-1">
                 <h2 className="text-white">Detail Pengaduan</h2>
                 <div className="card">
@@ -107,8 +107,8 @@ const PengaduanDetailPage = () => {
 
 
             </div>
-        </LayoutAdmin>
+       
     );
 };
 
-export default PengaduanDetailPage;
+export default Detaildatapengaduan;

@@ -89,6 +89,7 @@ import WebSearch from '../pages/web/search/Index.jsx';
 import LayoutAdmin from "../layouts/Admin.jsx";
 import PengaduanDetailPage from "../pages/admin/pengaduan/Detail.jsx";
 import Datapengaduan from "../pages/web/datapengaduan/Index.jsx";
+import Detaildatapengaduan from "../pages/web/datapengaduan/Detail.jsx";
 
 function RoutesIndex() {
     return (
@@ -293,8 +294,11 @@ function RoutesIndex() {
             />
 
             
-                 {/* route "/pengaduan/regist" */}
+                 {/* route "/datapengaduan" */}
                  <Route path="/datapengaduan" element={<Datapengaduan />} /> 
+
+                  {/* route "/pengaduan/regist" */}
+                  <Route path="/datapengaduan/detail" element={<Detaildatapengaduan />} /> 
 
 
                  {/* route "/pengaduan/regist" */}

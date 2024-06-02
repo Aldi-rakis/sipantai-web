@@ -124,7 +124,7 @@ function WebHeader() {
                             <NavDropdown.Item as={Link} to="/categories">LIHAT LAINNYA <i className="fa fa-long-arrow-alt-right"></i></NavDropdown.Item>
                             </NavDropdown>
                             <Nav.Link as={Link} to="/places" className="fw-bold text-white"><i className="fa fa-globe-asia"></i> PLACES</Nav.Link>
-                            <Nav.Link as={Link} to="/maps" className="fw-bold text-white"><i className="fa fa-comment"></i> Pengaduan</Nav.Link>
+                            <Nav.Link as={Link} to="/datapengaduan" className="fw-bold text-white"><i className="fa fa-comment"></i> Pengaduan</Nav.Link>
                         </Nav>
                         <Nav>
                             <Nav.Link onClick={() => setModal(true)} className="fw-bold text-white me-4"><i className="fa fa-search"></i> SEARCH</Nav.Link>
