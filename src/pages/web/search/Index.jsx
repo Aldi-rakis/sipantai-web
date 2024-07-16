@@ -19,7 +19,7 @@ import PaginationComponent from "../../../components/utilities/Pagination";
 function WebSearch() {
 
     //title page
-    document.title = "Search - TRAVEL GIS - Website Wisata Berbasis GIS (Geographic Information System)";
+    document.title = "Search - SIPANTAI";
 
     //state places
     const [places, setPlaces] = useState([]);

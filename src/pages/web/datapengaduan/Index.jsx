@@ -13,7 +13,7 @@ import PaginationComponent from "../../../components/utilities/Pagination";
 
 function Datapengaduan() {
     // Title page
-    document.title = "Places - TRAVEL GIS - Website Wisata Berbasis GIS (Geographic Information System)";
+    document.title = "Places - SIPANTAI";
 
     // State pengaduan
     const [pengaduandata, setPengaduans] = useState([]);

@@ -27,7 +27,7 @@ import "react-confirm-alert/src/react-confirm-alert.css"; // Import css
 
 function UsersIndex() {
   //title page
-  document.title = "Users - Administrator Travel GIS";
+  document.title = "Users - Administrator SIPANTAI";
 
   //state posts
   const [users, setUsers] = useState([]);

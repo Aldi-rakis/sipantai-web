@@ -19,7 +19,7 @@ import toast from "react-hot-toast";
 function UserEdit() {
 
     //title page
-    document.title = "Edit User - Administrator Travel GIS";
+    document.title = "Edit User - Administrator SIPANTAI";
 
     //state
     const [name, setName] = useState("");

@@ -19,7 +19,7 @@ import toast from "react-hot-toast";
 function SliderCreate() {
 
     //title page
-    document.title = "Add New Slider - Administrator Travel GIS";
+    document.title = "Add New Slider - Administrator SIPANTAI";
 
     //state
     const [image, setImage] = useState("");

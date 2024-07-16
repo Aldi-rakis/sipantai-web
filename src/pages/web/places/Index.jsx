@@ -16,7 +16,7 @@ import PaginationComponent from "../../../components/utilities/Pagination";
 function WebPlacesIndex() {
 
     //title page
-    document.title = "Places - TRAVEL GIS - Website Wisata Berbasis GIS (Geographic Information System)";
+    document.title = "Places - SIPANTAI";
 
     //state places
     const [places, setPlaces] = useState([]);

@@ -4,7 +4,7 @@ import LayoutWeb from "../../../layouts/Web";
 import WebHeader from "../../../components/web/Header";
 
 function Home() {
-    document.title = "TRAVEL GIS - Website Wisata Berbasis GIS (Geographic Information System)";
+    document.title = "SIPANTAI - PUSAT LAYANAN SATU PINTU DAN INFORMASI” SEBAGAI INOVASI KREATIF PARIWISATA KABUPATEN PESISIR SELATAN";
 
     // State untuk menyimpan data input
     const [name, setName] = useState('');

@@ -6,7 +6,7 @@ import Cookies from "js-cookie";
 import toast from "react-hot-toast";
 
 function Pengaduanweb() {
-    document.title = "TRAVEL GIS - Website Wisata Berbasis GIS (Geographic Information System)";
+    document.title = "SIPANTAI - PUSAT LAYANAN SATU PINTU DAN INFORMASI” SEBAGAI INOVASI KREATIF PARIWISATA KABUPATEN PESISIR SELATAN";
 
     const [content, setContent] = useState("");
     const [title, setTitle] = useState("");

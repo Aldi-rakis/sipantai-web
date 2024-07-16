@@ -27,7 +27,7 @@ import "react-confirm-alert/src/react-confirm-alert.css"; // Import css
 
 function PlacesIndex() {
   //title page
-  document.title = "Places - Administrator Travel GIS";
+  document.title = "Places - Administrator SIPANTAI ";
 
   //state places
   const [places, setPlaces] = useState([]);

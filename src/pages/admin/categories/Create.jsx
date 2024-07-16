@@ -19,7 +19,7 @@ import toast from "react-hot-toast";
 function CategoryCreate() {
 
     //title page
-    document.title = "Add New Category - Administrator Travel GIS";
+    document.title = "Add New Category - Administrator Sipantai";
 
     //state
     const [name, setName] = useState("");

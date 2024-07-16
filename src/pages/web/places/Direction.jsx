@@ -19,7 +19,7 @@ mapboxgl.accessToken = import.meta.env.VITE_APP_MAPBOX;
 function WebPlaceDirection() {
 
     //title page
-    document.title = "Map Direction - TRAVEL GIS - Website Wisata Berbasis GIS (Geographic Information System)";
+    document.title = "Map Direction - SIPANTAI";
 
     //map container
     const mapContainer = useRef(null);

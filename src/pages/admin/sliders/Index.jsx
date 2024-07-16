@@ -28,7 +28,7 @@ import 'react-confirm-alert/src/react-confirm-alert.css'; // Import css
 function SlidersIndex() {
 
     //title page
-    document.title = "Sliders - Administrator Travel GIS";
+    document.title = "Sliders - Administrator SIPANTAI ";
 
     //state posts
     const [sliders, setSliders] = useState([]);

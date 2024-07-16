@@ -16,7 +16,7 @@ mapboxgl.accessToken = import.meta.env.VITE_APP_MAPBOX;
 function WebMapsIndex() {
 
     //title page
-    document.title = "Maps - TRAVEL GIS - Website Wisata Berbasis GIS (Geographic Information System)";
+    document.title = "Maps - SIPANTAI  - PUSAT LAYANAN SATU PINTU DAN INFORMASI” SEBAGAI INOVASI KREATIF PARIWISATA KABUPATEN PESISIR SELATAN";
 
     //map container
     const mapContainer = useRef(null);

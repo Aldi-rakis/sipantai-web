@@ -6,7 +6,7 @@ import Form from 'react-bootstrap/Form';
 
 
 function Login() {
-    document.title = "TRAVEL GIS - Website Wisata Berbasis GIS (Geographic Information System)";
+    document.title = "SIPANTAI";
 
 
 

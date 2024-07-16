@@ -19,7 +19,7 @@ import toast from "react-hot-toast";
 function UserCreate() {
 
     //title page
-    document.title = "Add New User - Administrator Travel GIS";
+    document.title = "Add New User - Administrator SIPANTAI";
 
     //state
     const [name, setName] = useState("");

@@ -27,7 +27,7 @@ import "react-confirm-alert/src/react-confirm-alert.css"; // Import css
 
 function CategoriesIndex() {
   //title page
-  document.title = "Categories - Administrator Travel GIS";
+  document.title = "Categories - Administrator SIPANTAI";
 
   //state posts
   const [categories, setCategories] = useState([]);

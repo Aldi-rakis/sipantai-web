@@ -13,7 +13,7 @@ import 'react-photo-view/dist/react-photo-view.css';
 function PengaduanIndex() {
   // Title page
   useEffect(() => {
-    document.title = "Pengaduan - Administrator Travel GIS";
+    document.title = "Pengaduan - Administrator SIPANTAI";
   }, []);
 
   // State

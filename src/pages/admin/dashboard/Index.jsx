@@ -13,7 +13,7 @@ import Cookies from "js-cookie";
 function Dashboard() {
 
 	//title page
-    document.title = "Dashboard - Administrator Travel GIS";
+    document.title = "Dashboard - Administrator SIPANTAI ";
 
     //set state
     const [categories, setCategories] = useState(0);

@@ -97,78 +97,7 @@ function WebCategoryShow() {
                                   </div>
                         }
                     </div>
-                </div>
-
-                <div className="slider-container">
-      <Slider {...settings}>
-        <div style={{}}>
-          <div style={{ border: '25px solid black', width: 200, height: 250, borderRadius: '10px' }} className="bg-black m-2 text-white">
-            <p>100</p>
-          </div>
-        </div>
-
-
-        <div style={{}}>
-          <div style={{ border: '25px solid black', width: 200, height: 250, borderRadius: '10px' }} className="bg-black m-2 text-white">
-            <p>100</p>
-          </div>
-        </div>
-
-         <div style={{}}>
-          <div style={{ border: '25px solid black', width: 200, height: 250, borderRadius: '10px' }} className="bg-black m-2 text-white">
-            <p>100</p>
-          </div>
-        </div>
-
-        <div style={{}}>
-          <div style={{ border: '25px solid black', width: 200, height: 250, borderRadius: '10px' }} className="bg-black m-2 text-white">
-            <p>100</p>
-          </div>
-        </div>
-
-        <div style={{}}>
-          <div style={{  width: 200, height: 250,  }} className=" m-2 text-white">
-            <img style={{ height: "100%", objectFit: "cover", width:"100%" , borderRadius: '10px' }} src="../public/Bandung.jpg" alt="" />
-            <p style={{textAlign: 'center'}}>Jembatan Akar</p>
-          </div>
-        </div>
-
-        <div style={{}}>
-          <div style={{ border: '25px solid black', width: 200, height: 250, borderRadius: '10px' }} className="bg-black m-2 text-white">
-            <p>100</p>
-          </div>
-        </div>
-
-        <div style={{}}>
-          <div style={{ border: '25px solid black', width: 200, height: 250, borderRadius: '10px' }} className="bg-black m-2 text-white">
-            <p>100</p>
-          </div>
-        </div>
-
-        <div style={{}}>
-          <div style={{ border: '25px solid black', width: 200, height: 250, borderRadius: '10px' }} className="bg-black m-2 text-white">
-            <p>100</p>
-          </div>
-
-        </div>
-         <div style={{}}>
-          <div style={{ border: '25px solid black', width: 200, height: 250, borderRadius: '10px' }} className="bg-black m-2 text-white">
-            <p>100</p>
-          </div>
-        </div>
-
-        <div style={{}}>
-          <div style={{ border: '25px solid black', width: 200, height: 250, borderRadius: '10px' }} className="bg-black m-2 text-white">
-            <p>100</p>
-          </div>
-        </div>
-
-
-        <div style={{ width: 175 }}>
-          <p>175</p>
-        </div>
-      </Slider>
-    </div>
+                </div>              
 
 
             </LayoutWeb>

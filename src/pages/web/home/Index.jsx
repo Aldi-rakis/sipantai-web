@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 import Slider from '../../../components/web/Slider';
 
 function Home() {
-  document.title = "TRAVEL GIS - Website Wisata Berbasis GIS (Geographic Information System)";
+
 
   const styles = {
     text: {

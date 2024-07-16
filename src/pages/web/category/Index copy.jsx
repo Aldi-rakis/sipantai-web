@@ -20,7 +20,7 @@ function Kategory() {
   };
 
   // Set judul dokumen
-  document.title = "TRAVEL GIS - Website Wisata Berbasis GIS (Geographic Information System)";
+  document.title = " SIPANTAI - Website Wisata Berbasis GIS (Geographic Information System)";
 
   // Variabel state
   const [categories, setCategories] = useState([]);

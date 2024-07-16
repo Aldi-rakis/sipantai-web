@@ -34,7 +34,7 @@ mapboxgl.accessToken = import.meta.env.VITE_APP_MAPBOX;
 function PlaceCreate() {
 
 	//title page
-    document.title = "Add New Place - Administrator Travel GIS";
+    document.title = "Add New Place - Administrator SIPANTAI ";
 
     //state form
     const [title, setTitle] = useState("");
