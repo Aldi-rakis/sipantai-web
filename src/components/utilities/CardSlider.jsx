@@ -24,9 +24,10 @@ function CardSlider(props) {
                 {props.images.slice(0, 1).map((placeImage, imageIndex) => (
                     <img key={imageIndex} style={styles.img} src={placeImage.image} alt={props.title} />
                 ))}
-                <p style={{ textAlign: 'center', fontWeight: "bold", color: "white" }}>{props.title}</p>
+                
                 </Link>
             </div>
+            <p style={{ textAlign: 'center', fontWeight: "bold", color: "white" }}>{props.title}</p>
            
         </div>
        

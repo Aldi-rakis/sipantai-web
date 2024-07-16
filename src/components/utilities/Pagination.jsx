@@ -5,7 +5,7 @@ function PaginationComponent(props) {
 
     return (
         props.total > 0 && (
-            <Pagination
+            <Pagination 
                 innerClass={`pagination justify-content-${props.position} mb-0`}
                 activePage={props.currentPage}
                 activeClass="page-item active"
@@ -14,6 +14,7 @@ function PaginationComponent(props) {
                 onChange={props.onChange}
                 itemClasss="page-item"
                 linkClass="page-link"
+            
             />
         )
     )

@@ -63,7 +63,7 @@ function Datapengaduan() {
             <LayoutWeb>
 
 
-                <div className="container mt-80">
+                <div className="container mt-80 mb-100">
                     <div className="row">
                         {pengaduandata.length > 0
                             ? pengaduandata.map((Pengaduan, index) => (
@@ -109,7 +109,7 @@ function Datapengaduan() {
                     </div>
 
 
-                    <PaginationComponent
+                    <PaginationComponent 
                         currentPage={currentPage}
                         perPage={perPage}
                         total={total}

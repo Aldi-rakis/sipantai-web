@@ -14,7 +14,7 @@ function privateRoutesUser({ children }) {
 
     //if token not set
     if(!token){
-        return <Navigate to="/pengaduan/regist" replace />;
+        return <Navigate to="/admin/login" replace />;
     }else if(token && role == 'users'){
         return children;
 

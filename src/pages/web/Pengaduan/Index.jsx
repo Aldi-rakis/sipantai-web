@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import LayoutWeb from "../../../layouts/Web";
 import Form from 'react-bootstrap/Form';
 import Api from "../../../api";
@@ -6,12 +7,13 @@ import Cookies from "js-cookie";
 import toast from "react-hot-toast";
 
 function Pengaduanweb() {
-    document.title = "SIPANTAI - PUSAT LAYANAN SATU PINTU DAN INFORMASI” SEBAGAI INOVASI KREATIF PARIWISATA KABUPATEN PESISIR SELATAN";
+    document.title = "SIPANTAI - PUSAT LAYANAN SATU PINTU DAN INFORMASI” SEBAGAI INOVASI KREATIF PARIWISATA KABUPATEN PESISIR SELATAN";
 
     const [content, setContent] = useState("");
     const [title, setTitle] = useState("");
     const [image, setImage] = useState(null);
     const token = Cookies.get("token");
+    const navigate = useNavigate(); // Initialize useNavigate
 
     const handleSubmit = async (e) => {
         e.preventDefault();
@@ -36,11 +38,12 @@ function Pengaduanweb() {
                 setContent("");
                 setTitle("");
                 setImage(null);
+                navigate('/'); // Redirect to home page
             } else {
                 toast.error("Gagal mengirim pengaduan.");
             }
         } catch (error) {
-            toast.error("Terjadi kesalahan saat mengirim pengaduan.");
+            toast.error("Isi semua data form saat mengirim pengaduan.");
         }
     };
 

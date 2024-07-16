@@ -13,7 +13,7 @@ import 'react-photo-view/dist/react-photo-view.css';
 function PengaduanIndex() {
   // Title page
   useEffect(() => {
-    document.title = "Pengaduan - Administrator SIPANTAI";
+    document.title = "Pengaduan - Administrator Travel GIS";
   }, []);
 
   // State
@@ -134,20 +134,20 @@ function PengaduanIndex() {
                               </PhotoView>
                             </PhotoProvider>
                           </td>
-                          <td style={{ width: 900 }}>
+                          <td style={{ width: 600 }}>
                             <p style={isOpen ? null : {
-                              WebkitLineClamp: 2,
+                              WebkitLineClamp: 3,
                               WebkitBoxOrient: 'vertical',
                               overflow: 'hidden',
                               display: '-webkit-box',
                               maxWidth: '100%',
                               textAlign: "justify"
-                            }} ref={ref}>
+                            }} href={ref}>
                               {pengaduan.content}
                             </p>
 
                             {showReadMoreButton && (
-                              <button  className="btn btn-secondary btn-sm" onClick={() => setIsOpen(!isOpen)}>
+                              <button  className="btn btn-danger btn-sm" onClick={() => setIsOpen(!isOpen)}>
                                 {isOpen ? 'Read Less...' : 'Read More...'}
                               </button>
                             )}

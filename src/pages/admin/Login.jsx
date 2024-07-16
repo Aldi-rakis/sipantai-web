@@ -93,6 +93,10 @@ function Login() {
         return navigate("/admin/dashboard");
     }
 
+    const HandleToRegister = () => {
+        navigate('/pengaduan/regist'); // navigate to /admin/login
+    };
+
 
     return (
         <React.Fragment>
@@ -106,7 +110,7 @@ function Login() {
                         <div className="card border-0 rounded shadow-sm">
                             <div className="card-body">
                                 <div className="text-center">
-                                    <h6 className="fw-bold">LOGIN ADMIN</h6>
+                                    <h6 className="fw-bold">LOGIN USER</h6>
                                     <hr />
                                 </div>
                                 {validation.message && (
@@ -139,6 +143,10 @@ function Login() {
                                     )}
 
                                     <button className="btn btn-success shadow-sm rounded-sm px-4 w-100" type="submit" disabled={isLoading}> {isLoading ? "LOADING..." : "LOGIN"} </button>
+                                  
+                                  <button onClick={HandleToRegister}  className="btn btn-danger shadow-sm rounded-sm px-4 w-100 mt-2" disabled={isLoading}> {isLoading ? "Register..." : "Regitser"} </button>
+                               
+                                  
                                 </form>
                             </div>
                         </div>
