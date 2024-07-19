@@ -154,7 +154,7 @@ function PengaduanIndex() {
                           </td>
                           <td className="text-center">
                             <Link to={`/admin/pengaduan/edit/${pengaduan.id}`} className="btn btn-sm btn-primary me-2">
-                              <i className="fa fa-pencil-alt"></i>
+                              <i className="fa fa-pencil-alt"> </i>
                             </Link>
                             <Link to={`/admin/pengaduan/detail/${pengaduan.id}`} className="btn btn-sm btn-info me-2">
                               <i className="fa fa-eye"></i>

@@ -6,6 +6,8 @@ import toast from "react-hot-toast";
 import LayoutAdmin from "../../../layouts/Admin";
 import { PhotoProvider, PhotoView } from 'react-photo-view';
 import 'react-photo-view/dist/react-photo-view.css';
+// Import layout web
+import LayoutWeb from "../../../layouts/Web";
 
 const Detaildatapengaduan = () => {
     const { id } = useParams();
@@ -17,12 +19,13 @@ const Detaildatapengaduan = () => {
     useEffect(() => {
         const fetchPengaduan = async () => {
             try {
-                const response = await Api.get(`/api/admin/pengaduan/${id}`, {
+                const response = await Api.get(`/api/web/pengaduan/${id}`, {
                     headers: {
                         Authorization: `Bearer ${token}`,
                     },
                 });
                 setPengaduan(response.data.data);
+               
             } catch (error) {
                 toast.error("Gagal memuat detail pengaduan.");
             }
@@ -31,83 +34,63 @@ const Detaildatapengaduan = () => {
         fetchPengaduan();
     }, [id, token]);
 
-    const handleSubmit = async (e) => {
-        e.preventDefault();
-        const formData = new FormData();
-        formData.append("content", balasan);
-        // formData.append("image", image);
-        formData.append("pengaduan_id", id);
-
-        try {
-            await Api.post("/api/admin/pengaduandetail", formData, {
-                headers: {
-                    Authorization: `Bearer ${token}`,
-                    "Content-Type": "multipart/form-data",
-                },
-            });
-            toast.success("Balasan berhasil dikirim!");
-            setBalasan("");
-            setImage(null);
-        } catch (error) {
-            toast.error("Gagal mengirim balasan.");
-        }
-    };
-
+  
     if (!pengaduan) {
         return <h1>Loading...</h1>;
     }
 
     return (
-      
-            <div className="container mt-1">
-                <h2 className="text-white">Detail Pengaduan</h2>
-                <div className="card">
-                    <div className="card-body">
+        <LayoutWeb>
+        <div> 
 
-                        <p className="card-text">{pengaduan.content}</p>
-                        <PhotoProvider>
-                              <PhotoView src={pengaduan.image}>
-                                <img
-                                  src={pengaduan.image}
-                                  width={300}
-                                />
-                              </PhotoView>
-                            </PhotoProvider>
+        <div className="container mt-80">
+            <h2 className="text-white">Detail Pengaduan</h2>
+            <div className="card">
+                <div className="card-body">
+
+                    <p className="card-text">{pengaduan.content}</p>
+                    <PhotoProvider>
+                        <PhotoView src={pengaduan.image}>
+                            <img
+                                src={pengaduan.image}
+                                width={300}
+                            />
+                        </PhotoView>
+                    </PhotoProvider>
+                </div>
+            </div>
+        </div>
+
+
+        <div style={{width: "90%", float: "right"}} className="container mt-1">
+            <h2 className="text-white">Balasan</h2>
+            {pengaduan.pengaduan_detail.map((detail, index) => (
+            <div className="card" key={index}>
+                <div className="card-body">
+
+                            <p>{detail.content}</p>
+                    
+                   <div > 
+                    <PhotoProvider>
+                        <PhotoView src={detail.image}>
+                            <img style={{width: "100px", height: "100px"}}
+                                src={detail.image}
+                                width={200}
+                                
+                            />
+                        </PhotoView>
+                    </PhotoProvider>
                     </div>
                 </div>
-
-
-                <div className="mt-3">
-    <h4 className="text-white">Balas Pengaduan</h4>
-    <form onSubmit={handleSubmit}>
-        <div className="mb-">
-            <textarea
-                id="balasan"
-                className="form-control"
-                value={balasan}
-                onChange={(e) => setBalasan(e.target.value)}
-                placeholder="Isi Balasan"
-                required
-            />
-        </div>
-        <div className="mb-3">
-            <label htmlFor="image" className="form-label">Pilih Gambar (opsional)</label>
-            <input
-                id="image"
-                type="file"
-                className="form-control"
-                onChange={(e) => setImage(e.target.files[0])}
-                accept="image/*"
-                
-            />
-        </div>
-        <button type="submit" className="btn btn-primary mt-3 mb-5">Kirim Balasan</button>
-    </form>
-</div>
-
-
             </div>
-       
+             ))}
+        </div>
+
+        
+
+        </div>
+        </LayoutWeb>
+
     );
 };
 

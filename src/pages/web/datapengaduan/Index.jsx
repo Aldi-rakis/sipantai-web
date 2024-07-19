@@ -11,6 +11,8 @@ import { Link } from "react-router-dom";
 // Import pagination component
 import PaginationComponent from "../../../components/utilities/Pagination";
 
+
+
 function Datapengaduan() {
     // Title page
     document.title = "Places - SIPANTAI";
@@ -58,6 +60,7 @@ function Datapengaduan() {
         // eslint-disable-next-line react-hooks/exhaustive-deps
     }, []);
 
+   
     return (
         <React.Fragment>
             <LayoutWeb>
@@ -93,8 +96,15 @@ function Datapengaduan() {
                                                         }}>
                                                             <i className="fa fa-map-marker"></i> {Pengaduan.content}
                                                         </p>
-                                                        <button style={{ float: "right" }} className="btn btn-danger mb-1 btn-sm">Detail</button>
-                                                    </div>
+                                                     
+                                                 <Link to={`/datapengaduan/detail/${Pengaduan.id}`} >
+                                                        <button
+                                                            style={{ float: "right" }}
+                                                            className="btn btn-danger mb-1 btn-sm">Detail
+                                                        </button> 
+                                                        </Link>
+                                                        
+                                                        </div>
                                                 </div>
                                             </div>
                                         </div>
@@ -109,7 +119,7 @@ function Datapengaduan() {
                     </div>
 
 
-                    <PaginationComponent 
+                    <PaginationComponent
                         currentPage={currentPage}
                         perPage={perPage}
                         total={total}

@@ -15,6 +15,7 @@ function CardSlider(props) {
         }
       };
 
+ 
     return (
        
         <div key={props.id}>

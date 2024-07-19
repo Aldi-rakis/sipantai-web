@@ -38,7 +38,7 @@ function Slider() {
                 textAlign: 'center',
             }}>
                 <h1 style={{ fontSize: 30 }}>Tanya pesel</h1>
-                <p className="">Layanan Wisata Halal 1 PintuPesisir Selatan</p>
+                <p className="">Layanan Wisata  1 Pintu Pesisir Selatan</p>
             </div>
         </div>
     );
@@ -68,7 +68,7 @@ function Slider() {
                 textAlign: 'center',
             }}>
                 <h1 style={{ fontSize: 30 }}>Tanya pesel</h1>
-                <p className="">Layanan Wisata Halal 1 PintuPesisir Selatan</p>
+                <p style={{fontWeight: "bold"}} className="">Layanan Wisata  1 Pintu Pesisir Selatan</p>
             </div>
         </div>
     );

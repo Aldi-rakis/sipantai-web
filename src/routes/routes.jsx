@@ -298,7 +298,7 @@ function RoutesIndex() {
                  <Route path="/datapengaduan" element={<Datapengaduan />} /> 
 
                   {/* route "/pengaduan/regist" */}
-                  <Route path="/datapengaduan/detail" element={<Detaildatapengaduan />} /> 
+                  <Route  path="/datapengaduan/detail/:id" element={<Detaildatapengaduan />} /> 
 
 
                  {/* route "/pengaduan/regist" */}
