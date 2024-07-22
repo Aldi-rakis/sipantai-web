@@ -91,6 +91,9 @@ import PengaduanDetailPage from "../pages/admin/pengaduan/Detail.jsx";
 import Datapengaduan from "../pages/web/datapengaduan/Index.jsx";
 import Detaildatapengaduan from "../pages/web/datapengaduan/Detail.jsx";
 import Beritaindex from "../pages/admin/berita/index.jsx";
+import BeritaShow from "../pages/web/berita/show.jsx";
+import BeritaCreate from "../pages/admin/berita/create.jsx";
+import BeritaEdit from "../pages/admin/berita/edit.jsx";
 
 function RoutesIndex() {
     return (
@@ -254,6 +257,26 @@ function RoutesIndex() {
                 } 
             />
 
+               {/* private route "/admin/berita/ */}
+               <Route
+                path="/admin/berita/create"
+                element={
+                        <PrivateRouteAdmin>
+                            <BeritaCreate />
+                        </PrivateRouteAdmin>
+                } 
+            />
+
+     {/* private route "/admin/berita/ */}
+     <Route
+                path="/admin/berita/edit/:id"
+                element={
+                        <PrivateRouteAdmin>
+                            <BeritaEdit />
+                        </PrivateRouteAdmin>
+                } 
+            />
+
 
 
 
@@ -329,6 +352,9 @@ function RoutesIndex() {
                  
             {/* route "/search" */}
             <Route path="/berita" element={<Berita />} />
+                 
+            {/* route "/search" */}
+            <Route path="/berita/:id" element={<BeritaShow />} />
 
         </Routes>
     )

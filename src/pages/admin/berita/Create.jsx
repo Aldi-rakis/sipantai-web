@@ -1,5 +1,5 @@
 //import hook from react
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 
 //import layout
 import LayoutAdmin from "../../../layouts/Admin";
@@ -8,7 +8,7 @@ import LayoutAdmin from "../../../layouts/Admin";
 import Api from "../../../api";
 
 //import hook navigate dari react router dom
-import { useNavigate, useParams } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 //import js cookie
 import Cookies from "js-cookie";
@@ -31,7 +31,7 @@ import Berita from "../../web/berita/Index";
 
 
 
-function BeritaEdit() {
+function BeritaCreate() {
 
 	//title page
     document.title = "Add New Place - Administrator SIPANTAI ";
@@ -55,37 +55,7 @@ function BeritaEdit() {
     //navigate
     const navigate = useNavigate();
 
-    //get ID from parameter URL
-    const { id } = useParams();
-
-    //function "getCategoryById"
-    const getBeritabyId = async () => {
-
-        //get data from server
-        const response = await Api.get(`/api/admin/berita/${id}`, {
-
-            //header
-            headers: {
-                //header Bearer + Token
-                Authorization: `Bearer ${token}`,
-            }
-        });
-
-        //get response data
-        const data = await response.data.data
-
-        //assign data to state "name"
-        setTitle(data.title);
-    };
-
-    //hook useEffect
-    useEffect(() => {
-
-        //panggil function "getCategoryById"
-        getBeritabyId();
-
-        // eslint-disable-next-line react-hooks/exhaustive-deps
-    }, []);
+    
    
     //function "handleFileChange"
    
@@ -231,4 +201,4 @@ function BeritaEdit() {
     );
 }
 
-export default BeritaEdit;
+export default BeritaCreate;

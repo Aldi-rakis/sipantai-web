@@ -152,7 +152,7 @@ function Beritaindex() {
                 <form onSubmit={searchHandlder} className="form-group">
                   <div className="input-group mb-3">
                     <Link
-                      to="/admin/places/create"
+                      to="/admin/berita/create"
                       className="btn btn-md btn-success"
                     >
                       <i className="fa fa-plus-circle"></i> ADD NEW
@@ -201,7 +201,7 @@ function Beritaindex() {
                           </td>
                           <td className="text-center">
                             <Link
-                              to={`/admin/places/edit/${berita.id}`}
+                              to={`/admin/berita/edit/${berita.id}`}
                               className="btn btn-sm btn-primary me-2"
                             >
                               <i className="fa fa-pencil-alt"></i>

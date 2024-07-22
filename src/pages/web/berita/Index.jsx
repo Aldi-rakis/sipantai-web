@@ -14,6 +14,7 @@ import { Link } from "react-router-dom";
 import PaginationComponent from "../../../components/utilities/Pagination";
 
 
+
 function Berita() {
   // State pengaduan
   const [beritaData, setBeritaData] = useState([]);
@@ -75,6 +76,7 @@ function Berita() {
                   />
                 </div>
                 <Card.Body>
+                   <Link to={`/berita/${berita.id}`} style={{textDecoration: 'none', color: 'black'}} > 
                   <Card.Title>{berita.title}</Card.Title>
                   <Card.Text style={{
                     WebkitLineClamp: 3,
@@ -84,28 +86,29 @@ function Berita() {
                     maxWidth: '100%',
                     textAlign: 'justify'
                   }}>
-                    This is a longer card with supporting text below as a natural
-                    lead-in to additional content. This content is a little bit
-                    longer.longer card with supporting text below as a natural
-                    lead-in to additional content. This content is a little bitlonger card with supporting text below as a natural
-                    lead-in to additional content. This content is a little bit
+                 <div
+                                        dangerouslySetInnerHTML={{ __html: berita.description }}
+                                    />
                   </Card.Text>
 
-
+                  </Link>
 
                 </Card.Body>
+                
               </Card>
             </Col>
           ))
           }
-        </Row>
-        <PaginationComponent
+          <PaginationComponent
           currentPage={currentPage}
           perPage={perPage}
           total={total}
           onChange={(pageNumber) => fetchDataPengaduan(pageNumber)} // Pastikan memanggil fetchDataPengaduan
           position="center"
         />
+        </Row>
+        
+       
       </LayoutWeb>
 
     </React.Fragment>
