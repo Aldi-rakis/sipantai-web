@@ -37,13 +37,13 @@ function PlaceCreate() {
     document.title = "Add New Place - Administrator SIPANTAI ";
 
     //state form
-    const [title, setTitle] = useState("");
+    const [title, setTitle] = useState("-");
     const [categoryID, setCategoryID] = useState("");
-    const [description, setDescription] = useState("");
-    const [phone, setPhone] = useState("");
-    const [website, setWebsite] = useState("");
-    const [office_hours, setOfficeHours] = useState("");
-    const [address, setAddress] = useState("");
+    const [description, setDescription] = useState("-");
+    const [phone, setPhone] = useState("-");
+    const [website, setWebsite] = useState("-");
+    const [office_hours, setOfficeHours] = useState("-");
+    const [address, setAddress] = useState("-");
     const [latitude, setLatitude] = useState("");
     const [longitude, setLongitude] = useState("");
 

@@ -82,7 +82,7 @@ import WebPlaceDirection from '../pages/web/places/Direction.jsx';
 //import view web maps
 import WebMapsIndex from "../pages/web/maps/Index.jsx";  
 
-
+import Berita from "../pages/web/berita/Index.jsx";
 
 //import view web search
 import WebSearch from '../pages/web/search/Index.jsx';
@@ -90,6 +90,7 @@ import LayoutAdmin from "../layouts/Admin.jsx";
 import PengaduanDetailPage from "../pages/admin/pengaduan/Detail.jsx";
 import Datapengaduan from "../pages/web/datapengaduan/Index.jsx";
 import Detaildatapengaduan from "../pages/web/datapengaduan/Detail.jsx";
+import Beritaindex from "../pages/admin/berita/index.jsx";
 
 function RoutesIndex() {
     return (
@@ -243,6 +244,19 @@ function RoutesIndex() {
 
 
 
+              {/* private route "/admin/berita/ */}
+              <Route
+                path="/admin/berita/"
+                element={
+                        <PrivateRouteAdmin>
+                            <Beritaindex />
+                        </PrivateRouteAdmin>
+                } 
+            />
+
+
+
+
 
 
 
@@ -311,6 +325,10 @@ function RoutesIndex() {
                
             {/* route "/search" */}
             <Route path="/search" element={<WebSearch />} />
+
+                 
+            {/* route "/search" */}
+            <Route path="/berita" element={<Berita />} />
 
         </Routes>
     )

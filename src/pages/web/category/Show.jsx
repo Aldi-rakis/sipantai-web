@@ -88,6 +88,7 @@ function WebCategoryShow() {
                                         id={place.id}
                                         slug={place.slug}
                                         title={place.title}
+                                        description={place.description}
                                         images={place.images}
                                         address={place.address}
                                     />

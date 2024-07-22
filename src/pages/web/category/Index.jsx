@@ -39,7 +39,7 @@ function Kategory() {
   const fetchDataCategories = async () => {
     try {
       // const { data } = await Api.get(`/api/web/categories/`);
-      const response = await fetch('https://backend-sipantai.rakis.my.id/api/web/categories');
+      const response = await fetch('https://backend-sipantai2.rakis.my.id/api/web/categories');
       const data = await response.json();
 
       console.log(data.data);

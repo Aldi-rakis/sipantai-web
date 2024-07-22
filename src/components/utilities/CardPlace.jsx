@@ -20,6 +20,7 @@ function CardPlace(props) {
                                 <h5 className="card-title font-white">{props.title}</h5>
                                 <hr />
                                 <p className="card-text"><i className="fa fa-map-marker"></i> <i>{props.address}</i></p>
+                              
                                 <button style={{float: "right"}} className="btn btn-danger mb-3"> Detail</button>
                             </div>
                         </div>
