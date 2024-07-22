@@ -43,7 +43,7 @@ function Home() {
             </div>
           </div>
           <div className="row justify-content-center mt-4 text-white mx-auto">
-          <Link as={Link} to="/categories" style={{textDecoration: 'none'}} className=" mx-auto text-white px-0">   <h3 className="bg-dark mt-2  py-3" style={styles.text}> Kaba Nagari</h3></Link>
+          <Link as={Link} to="/berita" style={{textDecoration: 'none'}} className=" mx-auto text-white px-0">   <h3 className="bg-dark mt-2  py-3" style={styles.text}> Kaba Nagari</h3></Link>
           
           <Link as={Link} to="/categories" style={{textDecoration: 'none'}} className=" mx-auto text-white px-0">   <h3 className="bg-dark mt-2  py-3" style={styles.text}>Halaman Utama</h3></Link>
           
