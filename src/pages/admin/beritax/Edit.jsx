@@ -31,7 +31,7 @@ import Berita from "../../web/berita/Index";
 
 
 
-function BeritaEdit() {
+function BeritaxEdit() {
 
 	//title page
     document.title = "Add New Place - Administrator SIPANTAI ";
@@ -231,4 +231,4 @@ function BeritaEdit() {
     );
 }
 
-export default BeritaEdit;
+export default BeritaxEdit;

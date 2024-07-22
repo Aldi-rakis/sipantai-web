@@ -25,7 +25,7 @@ import 'react-quill/dist/quill.snow.css';
 
 
 
-function BeritaCreate() {
+function BeritaxCreate() {
 
 	//title page
     document.title = "Add New Place - Administrator SIPANTAI ";
@@ -195,4 +195,4 @@ function BeritaCreate() {
     );
 }
 
-export default BeritaCreate;
+export default BeritaxCreate;

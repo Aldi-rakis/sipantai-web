@@ -30,7 +30,7 @@ import { PhotoProvider, PhotoView } from 'react-photo-view';
 
 
 
-function Beritaindex() {
+function Beritaxindex() {
   //title page
   document.title = "Places - Administrator SIPANTAI ";
 
@@ -234,4 +234,4 @@ function Beritaindex() {
   );
 }
 
-export default Beritaindex;
+export default Beritaxindex;

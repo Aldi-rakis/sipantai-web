@@ -53,10 +53,10 @@ import PengaduanIndex from "../pages/admin/pengaduan/Index.jsx";
 
 
 //Import Berita
-import BeritaIndex from "../pages/admin/berita/index.jsx";
-import BeritaCreate from "../pages/admin/berita/Create.jsx";
-import BeritaEdit from "../pages/admin/berita/Edit.jsx";
 
+import Beritaxindex from "../pages/admin/beritax/Index.jsx";
+import BeritaxCreate from "../pages/admin/beritax/Create.jsx";
+import BeritaxEdit from "../pages/admin/beritax/Edit.jsx";
 
 
 //=======================================================================
@@ -100,6 +100,8 @@ import Datapengaduan from "../pages/web/datapengaduan/Index.jsx";
 import Detaildatapengaduan from "../pages/web/datapengaduan/Detail.jsx";
 
 import BeritaShow from "../pages/web/berita/show.jsx";
+
+
 
 
 
@@ -253,37 +255,38 @@ function RoutesIndex() {
                 } 
             />
 
+             {/* private route "/admin/pengaduan/ */}
+             <Route
+                path="/admin/berita/"
+                element={
+                        <PrivateRouteAdmin>
+                            <Beritaxindex />
+                        </PrivateRouteAdmin>
+                } 
+            />
 
-            {/* private route "/admin/berita/ */}
-            <Route
-                            path="/admin/berita/"
-                            element={
-                                    <PrivateRouteAdmin>
-                                        <BeritaIndex />
-                                    </PrivateRouteAdmin>
-                            } 
-                        />
-             
-
-               {/* private route "/admin/berita/ */}
-               <Route
+              {/* private route "/admin/pengaduan/ */}
+              <Route
                 path="/admin/berita/create"
                 element={
                         <PrivateRouteAdmin>
-                            <BeritaCreate />
+                            <BeritaxCreate />
                         </PrivateRouteAdmin>
                 } 
             />
 
-     {/* private route "/admin/berita/ */}
-     <Route
+             {/* private route "/admin/pengaduan/ */}
+             <Route
                 path="/admin/berita/edit/:id"
                 element={
                         <PrivateRouteAdmin>
-                            <BeritaEdit />
+                            <BeritaxEdit />
                         </PrivateRouteAdmin>
                 } 
             />
+
+
+        
 
 
 
