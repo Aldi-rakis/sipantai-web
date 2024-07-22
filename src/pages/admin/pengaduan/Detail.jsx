@@ -11,7 +11,7 @@ const PengaduanDetailPage = () => {
     const { id } = useParams();
     const [pengaduan, setPengaduan] = useState(null);
     const [balasan, setBalasan] = useState("");
-    const [image, setImage] = useState(null);
+    const [image, setImage] = useState("");
     const token = Cookies.get("token");
 
     useEffect(() => {
@@ -37,6 +37,7 @@ const PengaduanDetailPage = () => {
         formData.append("content", balasan);
         // formData.append("image", image);
         formData.append("pengaduan_id", id);
+        formData.append("image", image);
 
         try {
             await Api.post("/api/admin/pengaduandetail", formData, {
@@ -48,9 +49,14 @@ const PengaduanDetailPage = () => {
             toast.success("Balasan berhasil dikirim!");
             setBalasan("");
             setImage(null);
+              
+            
         } catch (error) {
             toast.error("Gagal mengirim balasan.");
         }
+
+          //redirect dashboard page
+          navigate("/admin/sliders");
     };
 
     if (!pengaduan) {
@@ -95,9 +101,11 @@ const PengaduanDetailPage = () => {
             <input
                 id="image"
                 type="file"
+                
                 className="form-control"
                 onChange={(e) => setImage(e.target.files[0])}
                 accept="image/*"
+                required
                 
             />
         </div>

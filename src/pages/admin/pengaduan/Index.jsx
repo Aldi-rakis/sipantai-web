@@ -9,6 +9,7 @@ import { confirmAlert } from "react-confirm-alert";
 import "react-confirm-alert/src/react-confirm-alert.css";
 import { PhotoProvider, PhotoView } from 'react-photo-view';
 import 'react-photo-view/dist/react-photo-view.css';
+import { useNavigate } from "react-router-dom";
 
 function PengaduanIndex() {
   // Title page
@@ -25,7 +26,7 @@ function PengaduanIndex() {
   const [isOpen, setIsOpen] = useState(false);
   const [showReadMoreButton, setShowReadMoreButton] = useState(false);
   const ref = useRef(null);
-
+  const navigate = useNavigate();
   // Token
   const token = Cookies.get("token");
 
