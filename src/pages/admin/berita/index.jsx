@@ -176,7 +176,7 @@ function Beritaindex() {
                       <tr>
                         <th scope="col">No.</th>
                         <th scope="col">Title</th>
-                        <th scope="col">image</th>
+                        <th scope="col">images</th>
                         <th scope="col">Actions</th>
                       </tr>
                     </thead>
