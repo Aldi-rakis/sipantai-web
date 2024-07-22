@@ -8,23 +8,23 @@ import "slick-carousel/slick/slick-theme.css";
 import CardSlider from "../../../components/utilities/CardSlider";
 import { Link } from "react-router-dom";
 
-function Kategory() {
-  const styles = {
-    card: {
-      width: "200px",
-      height: "250px",
-      textAlign: 'center',
-    },
-    img: {
-      height: "100%", objectFit: "cover", width: "100%", borderRadius: '10px'
-    }
-  };
+function Categories() {
+  // const styles = {
+  //   card: {
+  //     width: "200px",
+  //     height: "250px",
+  //     textAlign: 'center',
+  //   },
+  //   img: {
+  //     height: "100%", objectFit: "cover", width: "100%", borderRadius: '10px'
+  //   }
+  // };
 
-  const categoryDefault = [
-    { name: 'Hotel ', images: ['/public/bandung2.jpg', '/public/bandung2.jpg', '/public/bandung2.jpg', '/public/bandung2.jpg', '/public/bandung2.jpg'] },
-    { name: 'Wisata', images: ['/public/bandung2.jpg', '/public/bandung2.jpg', '/public/bandung2.jpg', '/public/bandung2.jpg', '/public/bandung2.jpg'] },
-    { name: 'Rumah ', images: ['/public/bandung2.jpg', '/public/bandung2.jpg', '/public/bandung2.jpg', '/public/bandung2.jpg', '/public/bandung2.jpg'] }
-  ];
+  // const categoryDefault = [
+  //   { name: 'Hotel ', images: ['/public/bandung2.jpg', '/public/bandung2.jpg', '/public/bandung2.jpg', '/public/bandung2.jpg', '/public/bandung2.jpg'] },
+  //   { name: 'Wisata', images: ['/public/bandung2.jpg', '/public/bandung2.jpg', '/public/bandung2.jpg', '/public/bandung2.jpg', '/public/bandung2.jpg'] },
+  //   { name: 'Rumah ', images: ['/public/bandung2.jpg', '/public/bandung2.jpg', '/public/bandung2.jpg', '/public/bandung2.jpg', '/public/bandung2.jpg'] }
+  // ];
 
   document.title = "SIPANTAI - PUSAT LAYANAN SATU PINTU DAN INFORMASI” SEBAGAI INOVASI KREATIF PARIWISATA KABUPATEN PESISIR SELATAN";
 
@@ -67,33 +67,13 @@ function Kategory() {
     arrows: false
   };
 
+
+ // Ketika OFfLINE
   const defaultImage = (
     <React.Fragment>
       <LayoutWeb>
       <div className="mt-75 mb-75">
-      {categoryDefault.map((category, index) => (
-        <div key={index} className="mt- mb-">
-          <div className="mx-3 mt-3" >
-            <div style={{ display: 'flex', justifyContent: 'space-between' }} className="text-white">
-              <h5 className="text-white">KATEGORI: <strong className="text-uppercase text-white">{category.name}</strong></h5>
-             <Link as={Link} to={`/category/${category.name}`}> lihat selengkapnya
-             </Link> 
-            </div>
-            <div className="slider-container">
-              <Slider {...settings}>
-                {category.images.map((image, imageIndex) => (
-                  <div key={imageIndex}>
-                    <div style={styles.card} className="mx-3 text-white">
-                      <img style={styles.img} src={image} alt='' />
-                      <p style={{ textAlign: 'center', fontWeight: "bold" }}> Bandung</p>
-                    </div>
-                  </div>
-                ))}
-              </Slider>
-            </div>
-          </div>
-        </div>
-      ))}
+      <h3 className="text-white">Loading data...</h3>
     </div>
       </LayoutWeb>
     </React.Fragment>
@@ -108,12 +88,14 @@ function Kategory() {
       <LayoutWeb>
         <div className="mt-75 mb-75">
           {categories.map((category, index) => (
-            <div className="mx-3 mt-3" key={index}>
+            <div className="mx-3 mt-3 slider-mobile" key={index}>
               <div style={{ display: 'flex', justifyContent: 'space-between' }} className="text-white">
-                <h5 className="text-white">KATEGORI: <strong className="text-uppercase text-white">{category.name}</strong></h5>
-                <Link to={`/category/${category.name}`}> lihat selengkapnya</Link>
+                <p className="text-white">KATEGORI: <strong className="text-uppercase text-white">{category.name}</strong></p>
+                
+                
+                <Link style={{marginRight:"10px", textDecorationColor: "none", color: 'white'}} to={`/category/${category.name}`}><p  >Lainnya...</p></Link>
               </div>
-              <div className="slider-container">
+              <div className="slider-container ">
                 <Slider {...settings}>
                   {category.places.map((place) => (
                     <CardSlider
@@ -134,4 +116,4 @@ function Kategory() {
   );
 }
 
-export default Kategory;
+export default Categories;

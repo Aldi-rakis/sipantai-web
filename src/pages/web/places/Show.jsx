@@ -160,7 +160,7 @@ function WebPlaceShow() {
                                             </div>
                                         </div>
                                         <div className="col-md-10 col-10">
-                                            <div className="capt-info fw-bold">ADDRESS</div>
+                                            <div className="capt-info fw-bold">Alamat</div>
                                             <div className="sub-title-info">
                                                 <i>{place.address}</i>
                                             </div>
@@ -171,7 +171,7 @@ function WebPlaceShow() {
                                             </div>
                                         </div>
                                         <div className="col-md-10 col-10">
-                                            <div className="capt-info fw-bold">OFFICE HOURS</div>
+                                            <div className="capt-info fw-bold">Waktu Buka</div>
                                             <div className="sub-title-info">{place.office_hours}</div>
                                         </div>
                                         <div className="col-md-2 col-2">
@@ -180,7 +180,7 @@ function WebPlaceShow() {
                                             </div>
                                         </div>
                                         <div className="col-md-10 col-10">
-                                            <div className="capt-info fw-bold">PHONE</div>
+                                            <div className="capt-info fw-bold">Telepon</div>
                                             <div className="sub-title-info">{place.phone}</div>
                                         </div>
                                         <div className="col-md-2 col-2">

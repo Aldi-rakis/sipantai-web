@@ -51,10 +51,14 @@ const Detaildatapengaduan = () => {
                     <p className="card-text">{pengaduan.content}</p>
                     <PhotoProvider>
                         <PhotoView src={pengaduan.image}>
-                            <img
+                       
+                            <img style={{width: "200px", height:"80%"}}
                                 src={pengaduan.image}
                                 width={300}
+                                height={200}
                             />
+                          
+                           
                         </PhotoView>
                     </PhotoProvider>
                 </div>

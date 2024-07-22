@@ -51,8 +51,7 @@ function Pengaduanweb() {
         const file = e.target.files[0];
         if (file) {
             setImage(file);
-            // Mengirim sinyal ke MIT App Inventor melalui WebViewString
-            window.AppInventor.setWebViewString('uploadImage');
+            
         }
     };
 

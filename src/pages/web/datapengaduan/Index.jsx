@@ -94,7 +94,7 @@ function Datapengaduan() {
 
 
                                                         }}>
-                                                            <i className="fa fa-map-marker"></i> {Pengaduan.content}
+                                                            <i className="fa"></i> {Pengaduan.content}
                                                         </p>
                                                      
                                                  <Link to={`/datapengaduan/detail/${Pengaduan.id}`} >

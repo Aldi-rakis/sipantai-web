@@ -275,8 +275,8 @@ function RoutesIndex() {
               <Route path="/categories" element={<Category />} /> 
 
               
-              {/* route "/" */}
-              <Route path="/kategori" element={<Category />} />
+              {/* route "/"
+              <Route path="/kategori" element={<Category />} /> */}
 
 
             {/* route "/category/:slug" */}
