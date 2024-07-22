@@ -53,7 +53,7 @@ import PengaduanIndex from "../pages/admin/pengaduan/Index.jsx";
 
 
 //Import Berita
-import BeritaIndex from "../pages/admin/berita/Index.jsx";
+import BeritaIndex from "../pages/admin/berita/index.jsx";
 import BeritaCreate from "../pages/admin/berita/Create.jsx";
 import BeritaEdit from "../pages/admin/berita/Edit.jsx";
 
@@ -254,16 +254,16 @@ function RoutesIndex() {
             />
 
 
-
-              {/* private route "/admin/berita/ */}
-              <Route
-                path="/admin/berita/"
-                element={
-                        <PrivateRouteAdmin>
-                            <BeritaIndex />
-                        </PrivateRouteAdmin>
-                } 
-            />
+            {/* private route "/admin/berita/ */}
+            <Route
+                            path="/admin/berita/"
+                            element={
+                                    <PrivateRouteAdmin>
+                                        <BeritaIndex />
+                                    </PrivateRouteAdmin>
+                            } 
+                        />
+             
 
                {/* private route "/admin/berita/ */}
                <Route
