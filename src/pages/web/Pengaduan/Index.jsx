@@ -47,6 +47,16 @@ function Pengaduanweb() {
         }
     };
 
+    const handleFileChange = (e) => {
+        const file = e.target.files[0];
+        if (file) {
+            setImage(file);
+            // Mengirim sinyal ke MIT App Inventor melalui WebViewString
+            window.AppInventor.setWebViewString('uploadImage');
+        }
+    };
+
+
     return (
         <React.Fragment>
             <LayoutWeb>
@@ -85,7 +95,7 @@ function Pengaduanweb() {
                             <Form.Control
                                 type="file"
                                 className="form-control"
-                                onChange={(e) => setImage(e.target.files[0])}
+                                onChange={handleFileChange}
                                 accept="image/*"
                             />
                         </Form.Group>

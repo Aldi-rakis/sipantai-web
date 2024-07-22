@@ -107,6 +107,7 @@ const PengaduanDetailPage = () => {
                 accept="image/*"
                 required
                 
+                
             />
         </div>
         <button type="submit" className="btn btn-primary mt-3 mb-5">Kirim Balasan</button>
