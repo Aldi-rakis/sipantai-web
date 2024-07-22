@@ -20,7 +20,7 @@ import Dashboard from '../pages/admin/dashboard/Index.jsx';
 import CategoriesIndex from '../pages/admin/categories/Index.jsx';
 
 //import view admin category Create
-import CategoryCreate from '../pages/admin/categories/Create.jsx';
+import CategoryCreate from '../pages/admin/categories/create.jsx';
 
 //import view admin category Edit
 import CategoryEdit from '../pages/admin/categories/Edit.jsx';
@@ -92,8 +92,9 @@ import Datapengaduan from "../pages/web/datapengaduan/Index.jsx";
 import Detaildatapengaduan from "../pages/web/datapengaduan/Detail.jsx";
 import Beritaindex from "../pages/admin/berita/index.jsx";
 import BeritaShow from "../pages/web/berita/show.jsx";
-import BeritaCreate from "../pages/admin/berita/create.jsx";
+
 import BeritaEdit from "../pages/admin/berita/edit.jsx";
+import BeritaCreate from "../pages/admin/berita/create.jsx";
 
 function RoutesIndex() {
     return (
