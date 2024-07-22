@@ -3,8 +3,7 @@ import Col from 'react-bootstrap/Col';
 import Row from 'react-bootstrap/Row';
 import LayoutWeb from "../../../layouts/Web";
 import React from "react";
-import bandung from "../../../../public/bandung.jpg"
-import bandung2 from "../../../../public/bandung2.jpg"
+
 
 
 
@@ -19,7 +18,7 @@ function Berita() {
               <Card>
                 <div > <p
                 style={{position: "absolute" ,backgroundColor: "white",padding:"5px",borderRadius: "5px", fontWeight: "Bold", bottom: "150px", right: "16px"}}>29 April 2021</p>
-                  <Card.Img variant="bottom" src={bandung2}
+                  <Card.Img variant="bottom" src="/public/bandung2.jpg"
                     /> 
                 </div>
                 <Card.Body>
