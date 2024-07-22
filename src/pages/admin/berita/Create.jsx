@@ -22,12 +22,6 @@ import ReactQuill from 'react-quill';
 // quill CSS
 import 'react-quill/dist/quill.snow.css';
 
-//mapbox gl
-import mapboxgl from 'mapbox-gl'; // eslint-disable-line import/no-webpack-loader-syntax
-
-//mapbox gl geocoder
-import MapboxGeocoder from '@mapbox/mapbox-gl-geocoder';
-import Berita from "../../web/berita/Index";
 
 
 
