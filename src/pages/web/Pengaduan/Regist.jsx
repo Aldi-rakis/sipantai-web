@@ -28,7 +28,7 @@ function Home() {
         };
 
         try {
-            const response = await fetch('http://localhost:8000/api/web/register', {
+            const response = await fetch('https://backend-sipantai2.rakis.my.id/api/web/register', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
